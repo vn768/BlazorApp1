@@ -19,10 +19,10 @@ jobs:
           dotnet-version: '10.0.x'
 
       - name: Publish
-        run: dotnet publish DNOV/DNOV.csproj -c Release -o release
+        run: dotnet publish BlazorApp1/BlazorApp1.csproj -c Release -o release
 
       - name: Update base href for GitHub Pages
-        run: sed -i 's#<base href="/" />#<base href="/DNOV/" />#g' release/wwwroot/index.html
+        run: sed -i 's#<base href="/" />#<base href="/BlazorApp1/" />#g' release/wwwroot/index.html
 
       - name: Add .nojekyll
         run: touch release/wwwroot/.nojekyll
